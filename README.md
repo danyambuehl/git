@@ -3,22 +3,24 @@ GIT
 
 ### Workflows
 
-![GitLab](/images/git.png)**Externes Repository zu lokalen Ordner Klonen**
+![GitLab](/git.png)**Externes Repository zu lokalen Ordner Klonen**
 ```  
   $ git clone <repo> <directory>
   $ git clone git@gitlab.com:daniel.ambuehl/lokalubuntu.git lokalubuntu
 ```
-![GitLab](/images/gitlab.png) **Gitlab Repository mit Script erstellen**
+![GitLab](/gitlab.png) **Gitlab Repository mit Script erstellen**
 
 Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_script.md)
  ```  
   $ ./git_remote.sh <GitlabBenutzer> <ProjectName>
   $ ./git_remote.sh daniel.ambuehl lazyaws
  ```  
- ![GitHub](/images/github.png) **Manuel neues Git Repository erstellen**
+ ![GitHub](/github.png) **Manuel neues Git Repository erstellen**
 1. Neues Git Repository in Web erstellen 
 ```
+ $ echo "# new" >> README.md
  $ git init
+ $ git add .
  $ git commit -m "first commit"
  $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
  $ git push -u origin master
@@ -26,7 +28,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 
 ### Basic Befehle
 
- ![Gituebersicht](/images/git_flow.jpg)  
+ ![Gituebersicht](/git_flow.png)  
 
   **Git Help anzeigen** 
   
