@@ -2,21 +2,25 @@ GIT
 ====
 
 ### Workflows
+***
 
-![GitLab](/git.png)**Externes Repository zu lokalen Ordner Klonen**
+![GitLab](/images/git.png)**Externes Repository zu lokalen Ordner Klonen**
 ```  
   $ git clone <repo> <directory>
   $ git clone git@gitlab.com:daniel.ambuehl/lokalubuntu.git lokalubuntu
 ```
-![GitLab](/gitlab.png) **Gitlab Repository mit Script erstellen**
+
+![GitLab](/images/gitlab.png) **Gitlab Repository mit Script erstellen**
 
 Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_script.md)
  ```  
   $ ./git_remote.sh <GitlabBenutzer> <ProjectName>
   $ ./git_remote.sh daniel.ambuehl lazyaws
  ```  
- ![GitHub](/github.png) **Manuel neues Git Repository erstellen**
-1. Neues Git Repository in Web erstellen 
+ ![GitHub](/images/github.png) **Manuel neues Git Repository erstellen**
+1. Neues Git Repository in Web erstellen
+2. Lokalen Ordner für Gitlab erstellen 
+3. Mit Gitbash folgendes ausführen 
 ```
  $ echo "# new" >> README.md
  $ git init
@@ -26,9 +30,17 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
  $ git push -u origin master
 ```
 
-### Basic Befehle
+![GitLab](/images/error.png)**Troubleshooting**
+```  
+  $ git remote -v
+  $ git remote remove origin
+  $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
+```
 
- ![Gituebersicht](/git_flow.png)  
+### Basic Befehle
+***
+
+ ![Gituebersicht](/images/git_flow.png)  
 
   **Git Help anzeigen** 
   
@@ -67,6 +79,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   > `$ git config --list`  
 
 ## Upload 
+***
 
 ### Commits the Staged Area to the Head 
 
@@ -80,9 +93,9 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   
    `$ git commit --amend`
 
-###    
 
 ## Status 
+***
 
 ### Aktuellen Stand :blush:
   
@@ -106,6 +119,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 
 
 ## Branch 
+***
 
 ### Liste alle Branches in deinem Repository
   
@@ -148,6 +162,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   > `$ git push --set-upstream origin test`  
 
 ## Merge 
+***
 
 ### It is best Practice to make sure receiving branch and the merging branch are up-to-date with the latest remote changes
   
@@ -190,6 +205,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   ```
 
 ## Restore
+***
 
 ### Suche den entsprechenden Commit Hash mit  
 
@@ -218,6 +234,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
    > `$ git reset`
 
 ## Comparing 
+***
 
 ### Shows the difference between two input data sets 
   
@@ -234,6 +251,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 7.  + Added Line in Textfile
 
 ## Exclude 
+***
 
 ### Erstellen des Global Excludion list im Homeverzeichniss am besten
   
@@ -260,6 +278,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 > `exclusion file containing the pattern : line number of the pattern : pattern    file name`
 
 ## Alias 
+***
 
 ### Create an Alias called co who stands for checkout 
   
