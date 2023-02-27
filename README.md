@@ -36,8 +36,16 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   $ git remote remove origin
   $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
 ```
+### Inhaltsverzeichnis
 
-### Basic Befehle
+* 01 - [Basic commands](#-01---Basic commands)
+* 02 - [Git Client](#--02---Upload)
+* 03 - [VirtualBox](#--03---virtualbox)
+* 04 - [Vagrant](#--04---vagrant)
+* 05 - [Visual Studio Code](#-05---visual-studio-code) / [Alternative Markdown Editoren](#alternative-editoren)
+* 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
+
+### Basic commands
 ***
 
  ![Gituebersicht](/images/git_flow.png)  
@@ -293,9 +301,9 @@ $ git config --global alias.st status
 
 ---
 
-web: [`Beste Source für Git`](https://www.atlassian.com/git/tutorials/setting-up-a-repository),
+Source: [`Git How to`](https://www.atlassian.com/git/tutorials/setting-up-a-repository),
 ---
 
-> [⇧ **Zurück zur Hauptseite**](/README.md)
+> [⇧ **Back to top**](#Workflows)
 
 ---
