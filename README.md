@@ -37,7 +37,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
 ```
 
-**Troubleshooting "Merge conflict in git_auftrag_2/README.md"** 
+![GitLab](/images/error.png)**Troubleshooting "Merge conflict in git_auftrag_2/README.md"** 
 
  ```
   $ git status
