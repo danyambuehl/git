@@ -38,14 +38,14 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 ```
 ### Inhaltsverzeichnis
 
-* 01 - [Basic commands](#01_Basic)
-* 02 - [Git Client](#02_Upload)
-* 03 - [VirtualBox](#--03---virtualbox)
-* 04 - [Vagrant](#--04---vagrant)
+* 01 - [Basic commands](#01_Basic-commands)
+* 02 - [Commits](#02_Commits)
+* 03 - [Status](03_Status)
+* 04 - [Branch](#04_Branch)
 * 05 - [Visual Studio Code](#-05---visual-studio-code) / [Alternative Markdown Editoren](#alternative-editoren)
 * 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
 
-## 01_Basic
+## 01_Basic commands
 
  ![Gituebersicht](/images/git_flow.png)  
 
@@ -85,7 +85,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   
   > `$ git config --list`  
 
-## 02_Upload 
+## 02_Commits 
 
 
 ### Commits the Staged Area to the Head 
@@ -124,8 +124,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
    > `$ git log --follow git_auftrag_2/README.md`
 
 
-## Branch 
-***
+## 04_Branch 
 
 ### Liste alle Branches in deinem Repository
   
