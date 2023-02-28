@@ -38,14 +38,18 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 ```
 ### Inhaltsverzeichnis
 
-* 01 - [Basic commands](#01_Basic-commands)
-* 02 - [Commits](#02_Commits)
-* 03 - [Status](03_Status)
-* 04 - [Branch](#04_Branch)
-* 05 - [Visual Studio Code](#-05---visual-studio-code) / [Alternative Markdown Editoren](#alternative-editoren)
-* 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
+* 01 - [Basic commands](#01-Basic-commands)
+* 02 - [Commits](#02-Commits)
+* 03 - [Status](03-Status)
+* 04 - [Branch](#04-Branch)
+* 05 - [Merge ](#05-Merge)
+* 06 - [Conflicts](#06-Conflicts)
+* 07 - [Restore](#07-Restore)
+* 08 - [Comparing](#08-Comparing)
+* 09 - [Exclude ](#09-Exclude)
+* 10 - [Alias ](#10-Alias )
 
-## 01_Basic commands
+## 01 Basic commands
 
  ![Gituebersicht](/images/git_flow.png)  
 
@@ -81,126 +85,125 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   
   > `$ git fetch` 
 
-### Git Config anschauen 
+  **Git Config anschauen**
   
   > `$ git config --list`  
 
-## 02_Commits 
+## 02 Commits 
 
 
-### Commits the Staged Area to the Head 
+**Commits the Staged Area to the Head**
 
    `$ git commit -m "commit commend here"`
 
-### Commits all tracked files directly to the Head
+**Commits all tracked files directly to the Head**
   
    `$ git commit -am "commit commend here"`
 
-### Commits all tracked files directly to the Head but while edditing the last commit
+**Commits all tracked files directly to the Head but while edditing the last commit**
   
    `$ git commit --amend`
 
 
-## 03_Status 
+## 03 Status 
 
-### Aktuellen Stand :blush:
+**Aktuellen Stand**
   
   > `$ git status`
 
-### Displays complete commit history 
+**Displays complete commit history** 
 
    > `$ git log`
 
-### Displays last 3 commits
+**Displays last 3 commits**
 
    > `$ git log - 3`
 
-### Displays all Commits but just a single line for each commit
+**Displays all Commits but just a single line for each commit**
 
    > `$ git log --oneline`
 
-### Displays all Commits of a specific File 
+**Displays all Commits of a specific File** 
 
    > `$ git log --follow git_auftrag_2/README.md`
 
 
-## 04_Branch 
+## 04 Branch 
 
-### Liste alle Branches in deinem Repository
+**Liste alle Branches in deinem Repository**
   
   > `$ git branch`
 
-### Erstelen eines Branch
+**Erstelen eines Branch**
   
   > `$ git branch test-branch`
 
-### Erstelen eines Branch und direkt wechseln in den neuen branch
+**Erstelen eines Branch und direkt wechseln in den neuen branch**
   
   > `$ git checkout -b test-branch`
 
-### Löschen eines Branch / Grossed D = Force the Delete 
+**Löschen eines Branch / Grossed D = Force the Delete**
   
   > `$ git branch -d test-branch`
 
-### Remote Branch Löschen 
+**Remote Branch Löschen**
   
   > `$ git push origin --delete test-branch`
 
-### Remote Branch Löschen Zweite Variante 
+**Remote Branch Löschen Zweite Variante**
   
   > `$ git push origin :test`
 
-### aktueller Branch umbenennen 
+**aktueller Branch umbenennen**
   
   > `$ git branch -m test-branch`
 
-### Remote Branch anzueigen 
+**Remote Branch anzueigen**
   
   > `$ git branch -a`
 
-### Branch zu test-branch wechseln
+**Branch zu test-branch wechseln**
   
   > `$ git checkout test-branch`
 
-### Git push neuen Branch auf existierenden Upstream Repository
+**Git push neuen Branch auf existierenden Upstream Repository**
   
   > `$ git push --set-upstream origin test`  
 
-## Merge 
-***
+## 05 Merge 
 
-### It is best Practice to make sure receiving branch and the merging branch are up-to-date with the latest remote changes
+**It is best Practice to make sure receiving branch and the merging branch are up-to-date with the latest remote changes**
   
   > `$ git fetch`
   > `$ git pull`
 
-### **Wechsle zuerst in den Ziel Branch** und führe dann von dort wie folgt ein Merge aus
+**Wechsle zuerst in den Ziel Branch und führe dann von dort wie folgt ein Merge aus**
   
   > `$ git checkout master`
   > `$ git merge test-branch`
 
-### Danach noch die änderungen auf den Remote Repository Pushen 
+**Danach noch die änderungen auf den Remote Repository Pushen** 
   
   > `$ git push`
 
-## Conflicts
+## 06 Conflicts
 
-### Wenn du beim Pull oder push folgende Meldung erhälst hast du einen Konflikt 
+**Wenn du beim Pull oder push folgende Meldung erhälst hast du einen Konflikt** 
   
   ```
    $ CONFLICT (content): Merge conflict in git_auftrag_2/README.md
     Automatic merge failed; fix conflicts and then commit the result.
   ```
-### Dies kann man auch nochmals mit `$ git status` überprüfen
+**Dies kann man auch nochmals mit `$ git status` überprüfen**
   
   > `$ git status`
 
-### Nun einfach das erwähnte File mit dem Editor öffnen und die gewünschte Änderung abspeichern 
+**Nun einfach das erwähnte File mit dem Editor öffnen und die gewünschte Änderung abspeichern** 
 
   ```
    $ vi git_auftrag_2/README.md
   ```
-### Danach kann das angepasste File nochmals hinzugefügt werden sowie commited und mit push auf das Repository laden.  
+**Danach kann das angepasste File nochmals hinzugefügt werden sowie commited und mit push auf das Repository laden.**  
 
   ```
    $ git add git_auftrag_2/README.md
@@ -209,20 +212,19 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
    $ git push
   ```
 
-## Restore
-***
+## 07 Restore
 
-### Suche den entsprechenden Commit Hash mit  
+**Suche den entsprechenden Commit Hash mit**  
 
    > `$ git log -5`
    oder 
    > `$ git log --follow git_auftrag_2/README.md`
 
-### Mit diesem Behel gehst du zurück auf den ausgewählten Commit
+**Mit diesem Behel gehst du zurück auf den ausgewählten Commit**
   
   > `$ git checkout 10c23e0fc813e51a3aae47869c647c326d1ae325 git_auftrag_2/README.md`
 
-### Danch File wieder hinzufügen und commiten sowie pushen
+**Danch File wieder hinzufügen und commiten sowie pushen**
 
  ```
  $ git add git_auftrag_2/README.md
@@ -230,18 +232,17 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
  $ git push
   ```
 
-### Merge Übersicht or the **git diff**  
+**Merge Übersicht or the git diff**  
 
    > `$ git log --merge `
 
-### Can be used to Reset to known good state during merge conflict   
+**Can be used to Reset to known good state during merge conflict**  
 
    > `$ git reset`
 
-## Comparing 
-***
+## 08 Comparing 
 
-### Shows the difference between two input data sets 
+**Shows the difference between two input data sets** 
   
   > `$ git diff`
 
@@ -255,37 +256,35 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 6.  - Subtracted Line in textfile
 7.  + Added Line in Textfile
 
-## Exclude 
-***
+## 09 Exclude 
 
-### Erstellen des Global Excludion list im Homeverzeichniss am besten
+**Erstellen des Global Excludion list im Homeverzeichniss am besten**
   
   > `$ touch ~/.gitignore`
 
-### Hinzufügen der Liste zur Config
+**Hinzufügen der Liste zur Config**
   
   > `$ git config --global core.excludesFile ~/.gitignore`
 
-### Hinzufügen von exclusions zur Liste
+**Hinzufügen von exclusions zur Liste**
   
   > `$ echo exclude.txt >> .gitignore`
 
-### Force an ignored File
+**Force an ignored File**
   
   > `$ git add -f exclude.txt`
 
-### Troubleshoot your Exludion Files 
+**Troubleshoot your Exludion Files**
   
   > `$  git check-ignore -v exclude.txt"`
 
-#### Interpretieren der ausgabe:
+**Interpretieren der ausgabe:**
 
 > `exclusion file containing the pattern : line number of the pattern : pattern    file name`
 
-## Alias 
-***
+## 10 Alias 
 
-### Create an Alias called co who stands for checkout 
+**Create an Alias called co who stands for checkout**
   
   > `$ git config --global alias.co checkout`
 
@@ -297,8 +296,7 @@ $ git config --global alias.st status
 
 
 ---
-
-Source: [`Git How to`](https://www.atlassian.com/git/tutorials/setting-up-a-repository),
+<small>Quelle: [`Git How to`](https://www.atlassian.com/git/tutorials/setting-up-a-repository)</small>
 ---
 
 > [⇧ **Back to top**](#Workflows)
