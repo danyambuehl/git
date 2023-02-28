@@ -39,16 +39,13 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 ### Inhaltsverzeichnis
 
 * 01 - [Basic commands](#-01-Basic-commands)
-* 02 - [Git Client](# 02 Upload)
+* 02 - [Git Client](#-02-Upload)
 * 03 - [VirtualBox](#--03---virtualbox)
 * 04 - [Vagrant](#--04---vagrant)
 * 05 - [Visual Studio Code](#-05---visual-studio-code) / [Alternative Markdown Editoren](#alternative-editoren)
 * 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
 
-### 01 Basic commands
-======
-
-04 - Vagrant
+01 Basic commands
 ======
 
  ![Gituebersicht](/images/git_flow.png)  
@@ -89,8 +86,8 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   
   > `$ git config --list`  
 
-## 02 Upload 
-***
+02 Upload 
+======
 
 ### Commits the Staged Area to the Head 
 
