@@ -48,6 +48,9 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 ### 01 Basic commands
 ======
 
+04 - Vagrant
+======
+
  ![Gituebersicht](/images/git_flow.png)  
 
   **Git Help anzeigen** 
