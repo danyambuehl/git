@@ -22,11 +22,12 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 2. Lokalen Ordner für Gitlab erstellen 
 3. Mit Gitbash folgendes ausführen 
 ```
-  $ echo "# new" >> README.md
+  $ echo "# new" >> README.md 
   $ git init
   $ git add .
   $ git commit -m "first commit"
-  $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
+  $ git branch -M main
+  $ git remote add origin git@github.com:danyambuehl/[RepositoryName].git
   $ git push -u origin master
 ```
 
