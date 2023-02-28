@@ -22,25 +22,37 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
 2. Lokalen Ordner für Gitlab erstellen 
 3. Mit Gitbash folgendes ausführen 
 ```
- $ echo "# new" >> README.md
- $ git init
- $ git add .
- $ git commit -m "first commit"
- $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
- $ git push -u origin master
+  $ echo "# new" >> README.md
+  $ git init
+  $ git add .
+  $ git commit -m "first commit"
+  $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
+  $ git push -u origin master
 ```
 
-![GitLab](/images/error.png)**Troubleshooting**
+![GitLab](/images/error.png)**Troubleshooting "error: remote origin already exists"**
 ```  
   $ git remote -v
   $ git remote remove origin
   $ git remote add origin https://github.com/danyambuehl/[RepositoryName]
 ```
+
+![GitLab](/images/error.png)**Troubleshooting "Merge conflict in git_auftrag_2/README.md"** 
+
+ ```
+  $ git status
+  $ vi git_auftrag_2/README.md     -> File ändern und speichern
+  $ git add git_auftrag_2/README.md
+  $ git commit -m "Resolved the Conflicted File"
+  $ git pull
+  $ git push
+  ```
+
 ### Inhaltsverzeichnis
 
 * 01 - [Basic commands](#01-Basic-commands)
 * 02 - [Commits](#02-Commits)
-* 03 - [Status](03-Status)
+* 03 - [Status](#03-Status)
 * 04 - [Branch](#04-Branch)
 * 05 - [Merge ](#05-Merge)
 * 06 - [Conflicts](#06-Conflicts)
