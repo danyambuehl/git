@@ -1,12 +1,14 @@
 GIT
 ====
 
-### Workflows
+### Typical Workflows
 ***
 
 ![GitLab](/images/git.png)**Externes Repository zu lokalen Ordner Klonen**
 ```  
-  $ git clone <repo> <directory>
+  $ mkdir repo
+  $ cd ~/repo
+  $ git clone <repo> <directory>    # Blank Example
   $ git clone git@gitlab.com:daniel.ambuehl/lokalubuntu.git lokalubuntu
 ```
 
