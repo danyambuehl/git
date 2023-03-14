@@ -7,7 +7,7 @@ GIT
 ![GitLab](/images/git.png)**Externes Repository zu lokalen Ordner Klonen**
 ```  
   $ mkdir repo
-  $ cd ~/repo
+  $ cd repo
   $ git clone <repo> <directory>    # Blank Example
   $ git clone git@gitlab.com:daniel.ambuehl/lokalubuntu.git lokalubuntu
 ```
