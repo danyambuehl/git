@@ -30,6 +30,7 @@ Mit git_remote.sh Script in GitBash ausführen: [**Dokumentation Script**](git_s
   $ git commit -m "first commit"
   $ git branch -M main
   $ git remote add origin git@github.com:danyambuehl/[RepositoryName].git
+git push --set-upstream origin main
   $ git push -u origin master
 ```
 
